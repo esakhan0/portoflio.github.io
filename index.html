@@ -1,207 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap Portfolio Page Template</title>
-  <!-- Bootstrap -->
-  <link href="css/bootstrap-5.3.8.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home | Your Name</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a href="/projects" target="_self" class="navbar-brand"><img src="brand.png" class="img-fluid" alt="Placeholder image"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-  <section>
-    <div class="bg-light text-center mt-2 py-1 rounded-3">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h1>Lorem ipsum dolor sit.</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, deleniti, ea nisi suscipit atque tempore aspernatur harum unde veritatis neque rem dolores assumenda. Recusandae facilis dolores cum iste assumenda accusamus.</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+  <div class="wrap">
+    <!-- NAV -->
+    <header class="nav">
+      <a class="brand" href="index.html">
+        <span class="icon">💻</span>
+        <span>Esa Aslam Khan</span>
+      </a>
+
+      <nav class="navlinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="projects.html">Projects</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <span class="pill">Home</span>
+        <h1>Hello! <span class="wave">👋</span></h1>
+        <p class="sub">
+          I’m <b>Esa Khan</b> and I am interested in networking, cyber security, coding, and server management.
+          I do alot of projects including modding my switch, or creating and moderating a minecraft server! I am 14 yrs old.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a class="inline-link" href="about.html">About me <span>→</span></a>
+        </p>
+
+        <div class="card">
+          <div class="cardTop">
+            <div class="cardTitle">Quick links</div>
+            <div class="cardNums"><b>Updated&nbsp;</b> often</div>
+          </div>
+
+          <div class="list" style="margin-top:10px">
+            <a class="item" href="projects.html">
+              <div>
+                <h3>Projects</h3>
+                <div class="meta">See what I’m building</div>
+              </div>
+              <div class="arrow">›</div>
+            </a>
+
+            <a class="item" href="blog.html">
+              <div>
+                <h3>Blog</h3>
+                <div class="meta">Posts & updates</div>
+              </div>
+              <div class="arrow">›</div>
+            </a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h1>Lorem ipsum dolor sit amet</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, magni, doloribus, possimus eum sapiente deleniti doloremque fugit ut expedita molestiae iusto debitis eveniet modi obcaecati ipsam quos quis labore dicta.</p>
+
+      <div class="avatarCard">
+        <div class="avatar" title="Your profile">
+          <div class="initials">YN</div>
         </div>
       </div>
-    </div>
-  </section>
-  <section>
-    <div class="container mt-2">
-      <div class="row">
-        <div class="col-md-4 col-12">
-          <ul class="list-unstyled">
-            <li class="d-flex align-items-start mb-3">
-              <img class="me-3" src="images/35X35.gif" alt="Generic placeholder image">
-              <div>
-                <h5 class="mt-0 mb-1">List-based media object</h5>
-                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
-              </div>
-            </li>
-          </ul>
+    </section>
+
+    <!-- LATEST POSTS -->
+    <section class="section">
+      <div class="sectionTop">
+        <div>
+          <h2>Latest posts</h2>
+          <p>Updated Regularly</p>
         </div>
-        <div class="col-md-4 col-12">
-          <ul class="list-unstyled">
-            <li class="d-flex align-items-start mb-3">
-              <img class="me-3" src="images/35X35.gif" alt="Generic placeholder image">
-              <div>
-                <h5 class="mt-0 mb-1">List-based media object</h5>
-                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4 col-12">
-          <ul class="list-unstyled">
-            <li class="d-flex align-items-start mb-3">
-              <img class="me-3" src="images/35X35.gif" alt="Generic placeholder image">
-              <div>
-                <h5 class="mt-0 mb-1">List-based media object</h5>
-                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
+        <a class="seeAll" href="blog.html">See all</a>
       </div>
-    </div>
-  </section>
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h2>Latest Work</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, et, placeat !</p>
+
+      <div class="list" id="latestPosts"></div>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section class="section">
+      <div class="sectionTop">
+        <div>
+          <h2>Featured projects</h2>
+          <p>Projects I have worked on!&nbsp;</p>
         </div>
+        <a class="seeAll" href="projects.html">See all</a>
       </div>
-      <div class="row">
-        <div class="col-md-6 col-12 text-center">
-          <img class="img-fluid" src="images/400x400.gif" alt="">
-          <h4>Lorem ipsum dolor sit amet, consectetur elit</h4>
-          <h6>Lorem ipsum dolor sit amet, consectetur elit</h6>
-        </div>
-        <div class="col-md-6 col-12 text-center mt-md-0 mt-2">
-          <img class="img-fluid" src="images/400x400.gif" alt="">
-          <h4>Lorem ipsum dolor sit amet, consectetur elit</h4>
-          <h6>Lorem ipsum dolor sit amet, consectetur elit</h6>
-        </div>
+
+      <div class="list" id="latestProjects"></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+      <div>© 2026&nbsp; <span id="year"></span> Esa Khan</div>
+      <div class="footerLinks">
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:you@example.com">Email</a>
       </div>
-      <div class="row mt-2">
-        <div class="col-md-3 col-6"><img class="img-fluid float-right" src="images/200x200.gif" alt=""></div>
-        <div class="col-md-3 col-6"><img class="img-fluid float-left" src="images/200x200.gif" alt=""></div>
-        <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-right" src="images/200x200.gif" alt="">
-        </div>
-        <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-left" src="images/200x200.gif" alt="">
-        </div>
-      </div>
-      <hr>
-      <div class="row">
-        <div class="col-md-3 col-6"><img class="img-fluid float-right" src="images/200x200.gif" alt=""></div>
-        <div class="col-md-3 col-6"><img class="img-fluid float-left" src="images/200x200.gif" alt=""></div>
-        <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-right" src="images/200x200.gif" alt="">
-        </div>
-        <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-left" src="images/200x200.gif" alt="">
-        </div>
-      </div>
-    </div>
-  </section>
-  <hr>
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h1>Lorem ipsum dolor sit amet</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, magni, doloribus, possimus eum sapiente deleniti doloremque fugit ut expedita molestiae iusto debitis eveniet modi obcaecati ipsam quos quis labore dicta.</p>
-          <button type="button" class="btn btn-success">Get in touch</button>
-        </div>
-      </div>
-    </div>
-  </section>
-  <hr>
-  <div class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 col-12">
-          <h3 class="text-center">WHO WE ARE</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, ducimus, sit, quibusdam quidem recusandae veniam eos quod error nisi repellat excepturi laboriosam aspernatur suscipit possimus consectetur dolores nihil labore quas eius illo accusamus nulla sed blanditiis porro accusantium. Perspiciatis, perferendis!</p>
-        </div>
-        <div class="col-md-4 col-12">
-          <h3 class="text-center">GET IN TOUCH</h3>
-          <address class="text-center">
-            <strong>MyCompany, Inc.</strong><br>
-            Sunny Autumn Plaza, Grand Coulee,<br>
-            CA, 91308-4075, US<br>
-            <abbr title="Phone">P:</abbr> (123) 456-7890
-          </address>
-        </div>
-        <div class="col-md-4 col-12">
-          <h3 class="text-center">NEWSLETTER</h3>
-          <form>
-             <div class="d-flex flex-column align-items-start">
-              <div class="form-floating w-100 mb-2">
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="name@example.com">
-                <label for="exampleInputEmail1">Enter email</label>
-              </div>
-              <button type="submit" class="btn btn-dark">Subscribe</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <hr>
-  <footer class="text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <p>Copyright © MyCompany. All rights reserved.</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/popper-2.11.8.min.js"></script>
-  <script src="js/bootstrap-5.3.8.js"></script>
+    </footer>
+</div>
+
+  <!-- Data first, then main.js -->
+  <script src="data/posts.js"></script>
+  <script src="data/projects.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

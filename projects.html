@@ -1,9 +1,75 @@
 <!doctype html>
-<html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects | Your Name</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- NAV -->
+    <header class="nav">
+      <a class="brand" href="index.html" aria-label="Go to home">
+        <span class="icon">💻</span>
+        <span>Esa Aslam Khan&nbsp;</span>
+      </a>
+
+      <nav class="navlinks" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="projects.html" class="active">Projects</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="pageHero">
+      <span class="pill">Projects</span>
+      <h1>Things I’ve built</h1>
+      <p class="sub">
+        A collection of projects I’ve worked on.  
+        This list is generated automatically from <b>data/projects.js</b>.
+      </p>
+    </section>
+
+    <!-- PROJECTS LIST -->
+    <section class="section">
+      <div class="sectionTop">
+        <div>
+          <h2>All projects</h2>
+          <p>Newest first</p>
+        </div>
+      </div>
+
+      <!-- JS injects projects here -->
+      <div class="list" id="allProjects"></div>
+
+      <!-- Fallback -->
+      <noscript>
+        <div class="note">
+          JavaScript is required to display projects.
+        </div>
+      </noscript>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+      <div>© <span id="year"></span> 2026 Esa Khan</div>
+      <div class="footerLinks">
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:you@example.com">Email</a>
+      </div>
+    </footer>
+
+</div>
+
+  <!-- ONLY load what we need -->
+<script src="data/projects.js"></script>
+<script src="js/main.js"></script>
+</body>
 </html>
