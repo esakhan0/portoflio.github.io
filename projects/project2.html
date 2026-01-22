@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>I built a portfolio in a day </title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="../css/bootstrap-5.3.8.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="wrap">
+    <!-- NAV -->
+    <header class="nav">
+      <a class="brand" href="/" aria-label="Go to home">
+      <span class="icon">💻</span>
+        <span>Esa Aslam Khan&nbsp;</span>
+      </a>
+
+      <nav class="navlinks" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/posts">Blog</a>
+        <a href="/projects" class="active">Projects</a>
+      </nav>
+    </header>
+
+    <!-- POST -->
+    <article class="card post">
+		
+      <div class="postTop">
+        <span class="pill">Project</span>
+        <div class="postMeta">Jan 22, 2026 • 5 min read</div>
+      </div>
+
+      <h1 class="postTitle">I made a minecraft server that my friends can play on!&nbsp;&nbsp;</h1>
+      <p class="sub">
+        I wanted a minecraft server that can be hosted 24/7 and was available to my friends anytime.
+      </p>
+
+      <h2>Items I used!&nbsp;</h2>
+      <ul class="listClean">
+        <li>Small Server - THINKCENTRE i3 16GB&nbsp; &nbsp;</li>
+        <li>NEW RAM STICKS 8GB X 2&nbsp;&nbsp;</li>
+        <li>USB with Ubuntu installation media&nbsp;&nbsp;</li>
+      </ul>
+
+      <h2>My Experience!</h2>
+      <p>
+        I wanted to make a minecraft server with a panel for friends to play on anytime But as usual I ran ito many problem. I ordered a cheap thinkcentre which I would repurpose as a server. As the server arrived I booted it but came to a stop as the server starting beeping. I researched and came to a stop where I found out that the ram that came with the server was faulty. So I decided to order 8GB x 2 DDR3 SODIMM ram sticks to fix the problem. I installed the RAM by opening the enclousure of the server and removing and reinstalling the new sticks. After that the server booted up perfectly into windows (software it came with when bought). I then reset the hard drive and got ready to flash the Ubuntu 22.0 Server .iso file to my USB stick. After inserting I selected the startup order to my USB stick and then booted into Ubuntu Installation Menu where I installed the OS to my hard drive. Once complete I now had a fresh linux terminal ready to install my panel and node software! I chose the <a href="https://www.mcsmanager.com/"><strong><em>MCSM</em></strong></a> for ease and 0% hassle. I installed it using the command <strong><em>"sudo su -c "wget -qO- https://script.mcsmanager.com/setup.sh | bash"</em></strong> &nbsp;and this easily installed the software. Then I setup the administrator user by creating a hash for the <em><strong><a href="https://www.mcsmanager.com/">MCSM</a></strong></em> password. Once complete the web server booted up on port 3333. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<strong><a href="https://www.mcsmanager.com/">&nbsp;</a></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </p>
+      
+      <h2>Creating Cloudflare Tunnel</h2>
+      <p> &nbsp;To allow my friends to administrate on the server I set up a tunnel with <strong><a href="https://www.cloudflare.com/en-gb/"><em>Cloudflare</em></a></strong> to avoid being attacked and also isolated my server to a VLAN within my network. Adding a cloudflare tunnel was straightforward, I only had to paste a command that created and installed a tunnel on my serve. This tunnel was set to <strong>http://localhost:3333 </strong>so the <strong><a href="https://www.mcsmanager.com/"><em>MCSM</em></a></strong> webserver would be forwarded to my domain. I also added one more tunnel that used the tcp protocol (minecraft server protocol for java) that would tunnel port 25565 across to players so that my public ip adress would not be exposed. Once complete all I had to do was create my minecraft node instance!&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+      
+      <h2>Adding a node instance&nbsp;</h2>
+      <p> MCSM installs two different things, a node, and the panel. The panel is the webserver that is broadcasted over my domain to the internet and the node is the actual minecraft instance that allows players to join. Creating a node was very easy, I just went to the Market tab and selected minecraft then the Paper 1.21.8 package. This quickly installed my server and it was ready to startup. The node and panel has been all set up now!&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+      
+      <h2>Fixing the UI&nbsp;&nbsp;</h2>
+      <p> The panel was looking a bit bland so I added my own custom background by going to settings and adding mountain images from in game. I also designed a logo that spelled HALO SERVERS since my home network is called HaloGrid and placed it as the main logo that you press to go to the home page! Have a look below and rate the ui!&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+      <img src="../images/Screenshot 2026-01-22 201032.png" alt="Placeholder image" width="945" class="rounded img-fluid">                        
+
+      
+<div class="postNav">
+      <a class="btn btnGhost" href="/projects">← Back to Projects</a>
+      <a class="btn" href="/posts/">See Blog →</a>
+      </div>
+    </article>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+      <div>© <span id="year">2026 Esa Aslam Khan</span> </div>
+      <div class="footerLinks">
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:you@example.com">Email</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
+
