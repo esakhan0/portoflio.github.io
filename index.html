@@ -1,23 +1,13 @@
 <!doctype html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="dark">
-
-  <script>document.documentElement.classList.add('js');</script>
-
-  <style>
-    html, body { background:#0b0c10; margin:0; }
-  </style>
-
-  <link rel="stylesheet" href="/css/style.css?v=1">
-
   <title>Home | Esa Aslam Khan</title>
 </head>
 
 
-
-<body class="preload">
+<body>
   <div class="wrap">
     <header class="nav">
       <a class="brand" href="/" aria-label="Go to home">
@@ -116,10 +106,31 @@
     </footer>
   </div>
 
-<script src="/data/posts.js?v=1"></script>
-<script src="/data/projects.js?v=1"></script>
-<script src="/js/main.js?v=1" defer></script>
+<script src="/js/version.js"></script>
 
+<script>
+  const v = window.SITE_VERSION;
+
+  // Load CSS (cache-busted)
+  const css = document.createElement("link");
+  css.rel = "stylesheet";
+  css.href = `/css/style.css?v=${v}`;
+  document.head.appendChild(css);
+
+  // Load data files
+  const posts = document.createElement("script");
+  posts.src = `/data/posts.js?v=${v}`;
+  document.body.appendChild(posts);
+
+  const projects = document.createElement("script");
+  projects.src = `/data/projects.js?v=${v}`;
+  document.body.appendChild(projects);
+
+  // Load main logic LAST
+  const main = document.createElement("script");
+  main.src = `/js/main.js?v=${v}`;
+  document.body.appendChild(main);
+</script>
 
 </body>
 </html>
