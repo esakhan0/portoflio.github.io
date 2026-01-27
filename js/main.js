@@ -54,3 +54,14 @@
     renderItems(sorted, "allProjects");                // for Projects page
   }
 })();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(
+    ".wrap h1, .wrap h2, .wrap p, .wrap .card, .wrap .item, .wrap .sectionTop, .wrap .pill, .wrap .sub"
+  );
+
+  items.forEach((el, i) => {
+    el.classList.add("wave-in");
+    el.style.setProperty("--i", i);
+  });
+});

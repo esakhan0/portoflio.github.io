@@ -3,11 +3,37 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+<style>
+  /* Instant dark paint (prevents white flash) */
+  html, body { background:#0b0c10; margin:0; }
+
+  /* Hide ONLY until CSS is loaded (prevents unstyled version flash) */
+  body.preload { visibility: hidden; }
+</style>
+
+<!-- Load version first (keep it small + early) -->
+<script src="/js/version.js"></script>
+
+<script>
+  // Use your version.js value
+  const v = window.SITE_VERSION || "1";
+
+  // Inject CSS ASAP
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = `/css/style.css?v=${v}`;
+  link.onload = () => document.body.classList.remove("preload");
+  document.head.appendChild(link);
+
+  // FAIL-SAFE: never stay hidden if CSS fails
+  setTimeout(() => document.body.classList.remove("preload"), 1200);
+</script>
   <title>Home | Esa Aslam Khan</title>
 </head>
 
 
-<body>
+<body class="preload">
   <div class="wrap">
     <header class="nav">
       <a class="brand" href="/" aria-label="Go to home">
@@ -109,15 +135,8 @@
 <script src="/js/version.js"></script>
 
 <script>
-  const v = window.SITE_VERSION;
+  const v = window.SITE_VERSION || "1";
 
-  // Load CSS (cache-busted)
-  const css = document.createElement("link");
-  css.rel = "stylesheet";
-  css.href = `/css/style.css?v=${v}`;
-  document.head.appendChild(css);
-
-  // Load data files
   const posts = document.createElement("script");
   posts.src = `/data/posts.js?v=${v}`;
   document.body.appendChild(posts);
@@ -126,7 +145,6 @@
   projects.src = `/data/projects.js?v=${v}`;
   document.body.appendChild(projects);
 
-  // Load main logic LAST
   const main = document.createElement("script");
   main.src = `/js/main.js?v=${v}`;
   document.body.appendChild(main);

@@ -570,53 +570,13 @@ img{
   height: auto;
 }
 
-/* ===============================
-   PAGE LOAD ANIMATION + FOUC FIX
-================================ */
-
-/* Prevent flash before JS runs */
-body.preload{
-  opacity: 0;
-}
-
-body.anim-ready{
-  opacity: 1;
-  transition: opacity .25s ease;
-}
-
-/* Wave fade-in */
 .wave-in{
   opacity: 0;
   transform: translateY(12px);
   animation: waveFade .7s cubic-bezier(.2,.8,.2,1) forwards;
   animation-delay: calc(var(--i, 0) * 70ms);
-  will-change: transform, opacity;
 }
 
 @keyframes waveFade{
-  to{
-    opacity: 1;
-    transform: translateY(0);
-  }
+  to{ opacity: 1; transform: translateY(0); }
 }
-
-/* Page fade-out on navigation */
-body.page-leave{
-  opacity: 0;
-  transition: opacity .18s ease;
-}
-
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce){
-  .wave-in{
-    animation: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-  }
-  body.page-leave{
-    transition: none !important;
-    opacity: 1 !important;
-  }
-}
-
-
